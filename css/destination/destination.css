@@ -1,0 +1,182 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url("../../assets/destination/ivana-cajina-asuyh-_ZX54-unsplash.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+header {
+  position: relative;
+  z-index: 1;
+  margin-top: 40px;
+  margin-left: 48px;
+  color: white;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+  gap: 50px;
+  margin-left: 450px;
+}
+header .rectangle {
+  border-bottom: 1px solid rgb(125, 125, 125);
+  width: 500px;
+  position: relative;
+  z-index: 2;
+  margin-right: -5rem;
+}
+header nav {
+  position: relative;
+  z-index: 1;
+  padding: 0 140px;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  background-color: rgba(84, 85, 91, 0.31);
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  width: 890px;
+  height: 96px;
+  gap: 48px;
+  font-family: "Barlow Condensed", sans-serif;
+  letter-spacing: 2.7px;
+  cursor: pointer;
+}
+header nav a {
+  color: white;
+  text-decoration: none;
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 11px;
+}
+header nav a:hover:before {
+  opacity: 1;
+}
+header nav a.active:before {
+  background-color: white;
+  opacity: 1;
+}
+header nav a:before {
+  width: 100%;
+  background-color: rgb(151, 151, 151);
+  content: "";
+  height: 3px;
+  position: absolute;
+  bottom: -38px;
+  transition: opacity 0.3s ease-in-out;
+  opacity: 0;
+}
+header nav span {
+  font-weight: 700;
+}
+
+main {
+  color: white;
+  font-size: 28px;
+  margin-top: 60px;
+}
+main .title {
+  font-family: "Barlow Condensed", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 4.72px;
+  padding-top: 40px;
+  margin-left: 280px;
+}
+main .title span {
+  font-weight: bold;
+  color: #4b4b4c;
+  margin-right: 10px;
+}
+main .main {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin-top: 40px;
+}
+main .main .info {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+}
+main .main .info .description {
+  width: 445px;
+}
+main .main .info .description .rectangle {
+  margin: 60px 0 28px 0;
+  width: 450px;
+  border-bottom: 1px solid #4d4d4d;
+}
+main .main .info .description h2 {
+  font-family: "Bellefair", sans-serif;
+  font-size: 100px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+main .main .info .description p {
+  font-family: "Barlow", sans-serif;
+  font-size: 18px;
+  line-height: 32px;
+  font-weight: 400;
+}
+main .main .info .labels {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 35px;
+  margin-bottom: 37px;
+}
+main .main .info .labels a {
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  position: relative;
+  letter-spacing: 2.7px;
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 20px;
+  cursor: pointer;
+}
+main .main .info .labels a:hover:before {
+  opacity: 1;
+}
+main .main .info .labels a.active:before {
+  background-color: white;
+  opacity: 1;
+}
+main .main .info .labels a:before {
+  width: 100%;
+  background-color: rgb(151, 151, 151);
+  content: "";
+  height: 3px;
+  position: absolute;
+  bottom: -10px;
+  transition: opacity 0.3s ease-in-out;
+  opacity: 0;
+}
+main .main .info .extra-info {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 80px;
+}
+main .main .info .extra-info h3 {
+  font-size: 18px;
+  font-family: "Barlow Condensed", sans-serif;
+  letter-spacing: 2.36px;
+  font-weight: 300;
+  margin-bottom: 30px;
+}
+main .main .info .extra-info p {
+  font-family: "Bellefair", sans-serif;
+  font-size: 28px;
+  text-transform: uppercase;
+}/*# sourceMappingURL=destination.css.map */

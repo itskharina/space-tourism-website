@@ -1,0 +1,204 @@
+@mixin flex($direction) {
+    display: flex;
+    align-items: center;
+    flex-direction: $direction;
+}
+
+$black: #0b0d17;
+$grey: #d0d6f9;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url('../../assets/destination/ivana-cajina-asuyh-_ZX54-unsplash.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+// HEADER
+
+header {
+    position: relative;
+    z-index: 1;
+    margin-top: 40px;
+    margin-left: 48px;
+    color: white;
+    @include flex(row);
+    justify-content: center;
+    gap: 50px;
+    margin-left: 450px;
+
+    .rectangle {
+        border-bottom: 1px solid rgb(125, 125, 125);
+        width: 500px;
+        position: relative;
+        z-index: 2;
+        margin-right: -5rem;
+    }
+
+    nav {
+        position: relative;
+        z-index: 1;
+        padding: 0 140px;
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+        background-color: rgb(84 85 91 / 31%);
+        @include flex(row);
+        width: 890px;
+        height: 96px;
+        gap: 48px;
+        font-family: 'Barlow Condensed', sans-serif;
+        letter-spacing: 2.7px;
+        cursor: pointer;
+
+        a {
+            color: white;
+            text-decoration: none;
+            position: relative;
+            @include flex(row);
+            gap: 11px;
+
+            &:hover:before {
+                opacity: 1;
+            }
+            
+            &.active:before {
+                background-color: white;
+                opacity: 1;
+            }
+    
+            &:before {
+                width: 100%;
+                background-color: rgb(151, 151, 151);
+                content: "";
+                height: 3px;
+                position: absolute;
+                bottom: -38px;
+                transition: opacity .3s ease-in-out;
+                opacity: 0;
+            }
+        }
+
+        span {
+            font-weight: 700;
+        }
+    }
+}
+
+// MAIN
+
+main {
+    color: white;
+    font-size: 28px;
+    margin-top: 60px;
+
+    .title {
+            font-family: 'Barlow Condensed', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 4.72px;
+            padding-top: 40px;
+            margin-left: 280px;
+
+            span {
+                font-weight: bold;
+                color: #4b4b4c;
+                margin-right: 10px;
+            }
+    }
+
+    .main {
+        @include flex(row);
+        justify-content: space-evenly;
+        margin-top: 40px;
+
+        .info {
+            @include flex(column);
+            align-items: start;
+            justify-content: center;
+
+            .description {
+                width: 445px;
+
+                .rectangle {
+                    margin: 60px 0 28px 0;
+                    width: 450px;
+                    border-bottom: 1px solid #4d4d4d;
+                }
+
+                h2 {
+                    font-family: 'Bellefair', sans-serif;
+                    font-size: 100px;
+                    font-weight: 400;
+                    text-transform: uppercase;
+                }
+
+                p {
+                    font-family: 'Barlow', sans-serif;
+                    font-size: 18px;
+                    line-height: 32px;
+                    font-weight: 400;
+                }
+            }
+
+            .labels {
+                @include flex(row);
+                gap: 35px;
+                margin-bottom: 37px;
+
+                a {
+                    color: white;
+                    text-decoration: none;
+                    text-transform: uppercase;
+                    position: relative;
+                    letter-spacing: 2.7px;
+                    font-family: 'Barlow Condensed', sans-serif;
+                    font-size: 20px;
+                    cursor: pointer;
+
+                    &:hover:before {
+                        opacity: 1;
+                    }
+                    
+                    &.active:before {
+                        background-color: white;
+                        opacity: 1;
+                    }
+            
+                    &:before {
+                        width: 100%;
+                        background-color: rgb(151, 151, 151);
+                        content: "";
+                        height: 3px;
+                        position: absolute;
+                        bottom: -10px;
+                        transition: opacity .3s ease-in-out;
+                        opacity: 0;
+                    }
+                }
+            }
+
+            .extra-info {
+                @include flex(row);
+                gap: 80px;
+
+                h3 {
+                    font-size: 18px;
+                    font-family: 'Barlow Condensed', sans-serif;
+                    letter-spacing: 2.36px;
+                    font-weight: 300;
+                    margin-bottom: 30px;
+                }
+
+                p {
+                    font-family: 'Bellefair', sans-serif;
+                    font-size: 28px;
+                    text-transform: uppercase;
+                }
+            }
+        }
+    }
+}
