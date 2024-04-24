@@ -8,6 +8,8 @@ body {
   background-image: url("../../assets/home/background-home-desktop.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  min-height: 100vh;
+  overflow: hidden;
 }
 
 header {
@@ -22,6 +24,9 @@ header {
   justify-content: center;
   gap: 50px;
   margin-left: 450px;
+}
+header .hamburger {
+  display: none;
 }
 header .rectangle {
   border-bottom: 1px solid rgb(125, 125, 125);
@@ -42,10 +47,16 @@ header nav {
   flex-direction: row;
   width: 890px;
   height: 96px;
-  gap: 48px;
   font-family: "Barlow Condensed", sans-serif;
   letter-spacing: 2.7px;
   cursor: pointer;
+}
+header nav ul {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 48px;
+  list-style: none;
 }
 header nav a {
   color: white;
@@ -134,4 +145,129 @@ main a:after {
 main a:hover::after {
   width: 450px;
   height: 450px;
+}
+
+@media (max-width: 1339px) {
+  body {
+    background-image: url("../../assets/home/background-home-tablet.jpg");
+    overflow-y: auto;
+  }
+  header {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 0;
+  }
+  header img.logo {
+    margin-left: 30px;
+  }
+  header .rectangle {
+    border: none;
+  }
+  main {
+    margin-top: 150px;
+  }
+}
+@media (max-width: 960px) {
+  header {
+    font-size: 14px;
+  }
+  header nav {
+    padding: 0 30px;
+    width: auto;
+    display: block;
+  }
+  header nav span {
+    display: none;
+  }
+  main {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 80px;
+  }
+  main .main-text {
+    text-align: center;
+  }
+  main .main-text p {
+    text-align: center;
+  }
+  main a {
+    margin-bottom: 50px;
+  }
+}
+@media (max-width: 560px) {
+  body {
+    background-size: auto;
+  }
+  header .logo {
+    margin-top: 20px;
+  }
+  header .hamburger {
+    display: block;
+  }
+  header button {
+    border: none;
+    background-color: transparent;
+    margin-right: 20px;
+  }
+  header nav {
+    font-size: 18px;
+    position: absolute;
+    z-index: -1;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 0;
+    top: 0;
+    right: 0;
+    margin-right: -5.9rem;
+    padding: 20px;
+    min-width: 375px;
+    display: none;
+  }
+  header nav span {
+    display: inline;
+  }
+  header nav ul {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    margin-top: 110px;
+    padding-left: 15px;
+  }
+  header nav a:before {
+    display: none;
+  }
+  main .main-text {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: auto;
+  }
+  main .main-text h1 {
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 2.7px;
+  }
+  main .main-text h1 span {
+    display: block;
+    font-size: 80px;
+    margin-top: 30px;
+  }
+  main .main-text p {
+    max-width: 400px;
+    margin-top: 16px;
+    padding: 0 20px;
+  }
+  main a {
+    width: 200px;
+    height: 200px;
+    font-size: 25px;
+  }
+  main a:after {
+    width: 200px;
+    height: 200px;
+  }
 }/*# sourceMappingURL=main.css.map */
