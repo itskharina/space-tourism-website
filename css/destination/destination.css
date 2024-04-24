@@ -179,4 +179,56 @@ main .main .info .extra-info p {
   font-family: "Bellefair", sans-serif;
   font-size: 28px;
   text-transform: uppercase;
+}
+
+@media (max-width: 1339px) {
+  body {
+    background-size: auto;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+  header {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 0;
+  }
+  header nav {
+    padding: 0 50px;
+  }
+  header img.logo {
+    margin-left: 30px;
+  }
+  header .rectangle {
+    border: none;
+  }
+  main .title {
+    font-size: 25px;
+    margin-left: 40px;
+  }
+  main .main {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+  }
+  main .main .info {
+    width: 600px;
+    padding-bottom: 30px;
+    margin-top: 65px;
+    align-items: center;
+    text-align: center;
+  }
+  main .main .info .description {
+    width: 600px;
+  }
+  main .main .info .description .rectangle {
+    display: block;
+    position: relative;
+    width: 600px;
+  }
+  main .main .info .extra-info {
+    justify-content: center;
+  }
 }/*# sourceMappingURL=destination.css.map */

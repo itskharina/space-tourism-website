@@ -202,3 +202,68 @@ main {
         }
     }
 }
+
+@media (max-width: 1339px) {
+    body {
+        background-size: auto;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+
+    header {
+        @include flex(row);
+        justify-content: space-around;
+        margin: 0;
+
+        nav {
+            padding: 0 50px;
+        }
+
+        img.logo {
+            margin-left: 30px;
+        }
+
+        .rectangle {
+            border: none;
+        }
+    }
+
+    main {
+        .title {
+            font-size: 25px;
+            margin-left: 40px;
+        }
+
+        .main {
+            @include flex(column);
+            justify-content: center;
+            
+            .info {
+                width: 600px;
+                padding-bottom: 30px;
+                margin-top: 65px;
+                align-items: center;
+                text-align: center;
+
+                .description {
+                    width: 600px;
+                
+                    .rectangle {
+                        display: block;
+                        position: relative;
+                        width: 600px;
+                    }
+                }
+
+                .extra-info {
+                    justify-content: center;
+                }
+            }
+        }
+    }
+}
+
+
+@media (max-width: 680px) {
+
+}
