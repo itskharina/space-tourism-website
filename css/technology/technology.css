@@ -1,0 +1,155 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url("../../assets/technology/background-technology-desktop.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow-x: hidden;
+}
+
+header {
+  position: relative;
+  z-index: 1;
+  margin-top: 40px;
+  margin-left: 48px;
+  color: white;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+  gap: 50px;
+  margin-left: 450px;
+}
+header .rectangle {
+  border-bottom: 1px solid rgb(125, 125, 125);
+  width: 500px;
+  position: relative;
+  z-index: 2;
+  margin-right: -5rem;
+}
+header nav {
+  position: relative;
+  z-index: 1;
+  padding: 0 140px;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  background-color: rgba(84, 85, 91, 0.31);
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  width: 890px;
+  height: 96px;
+  gap: 48px;
+  font-family: "Barlow Condensed", sans-serif;
+  letter-spacing: 2.7px;
+  cursor: pointer;
+}
+header nav a {
+  color: white;
+  text-decoration: none;
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 11px;
+}
+header nav a:hover:before {
+  opacity: 1;
+}
+header nav a.active:before {
+  background-color: white;
+  opacity: 1;
+}
+header nav a:before {
+  width: 100%;
+  background-color: rgb(151, 151, 151);
+  content: "";
+  height: 3px;
+  position: absolute;
+  bottom: -38px;
+  transition: opacity 0.3s ease-in-out;
+  opacity: 0;
+}
+header nav span {
+  font-weight: 700;
+}
+
+main {
+  margin-top: 20px;
+  color: white;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin-right: -330px;
+}
+main .title {
+  font-family: "Barlow Condensed", sans-serif;
+  text-transform: uppercase;
+  font-size: 28px;
+  letter-spacing: 4.72px;
+}
+main .title span {
+  color: #4b4b4c;
+  font-weight: 700;
+}
+main .main {
+  margin-top: 130px;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 80px;
+}
+main .main .buttons {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 32px;
+}
+main .main button {
+  font-family: "Bellefair", sans-serif;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  font-size: 32px;
+  color: white;
+  background-color: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.25);
+  cursor: pointer;
+}
+main .main button:hover {
+  border: 2px solid rgb(255, 255, 255);
+}
+main .main button.active-button {
+  background-color: white;
+  color: black;
+}
+main .main h3 {
+  font-family: "Barlow Condensed", sans-serif;
+  text-transform: uppercase;
+  font-weight: 400;
+  letter-spacing: 2.7px;
+  margin-bottom: 11px;
+}
+main .main h2 {
+  text-transform: uppercase;
+  font-size: 56px;
+  font-weight: 400;
+  font-family: "Bellefair", sans-serif;
+  margin-bottom: 17px;
+}
+main .main p {
+  font-family: "Barlow", sans-serif;
+  font-size: 18px;
+  line-height: 32px;
+  width: 500px;
+  font-weight: 400;
+}
+main img {
+  margin-top: 70px;
+  width: 600px;
+}/*# sourceMappingURL=technology.css.map */

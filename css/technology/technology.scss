@@ -1,0 +1,175 @@
+@mixin flex($direction) {
+    display: flex;
+    align-items: center;
+    flex-direction: $direction;
+}
+
+$black: #0b0d17;
+$grey: #d0d6f9;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ 
+body {
+    background-image: url('../../assets/technology/background-technology-desktop.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow-x: hidden;
+}
+
+// HEADER
+
+header {
+    position: relative;
+    z-index: 1;
+    margin-top: 40px;
+    margin-left: 48px;
+    color: white;
+    @include flex(row);
+    justify-content: center;
+    gap: 50px;
+    margin-left: 450px;
+
+    .rectangle {
+        border-bottom: 1px solid rgb(125, 125, 125);
+        width: 500px;
+        position: relative;
+        z-index: 2;
+        margin-right: -5rem;
+    }
+
+    nav {
+        position: relative;
+        z-index: 1;
+        padding: 0 140px;
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+        background-color: rgb(84 85 91 / 31%);
+        @include flex(row);
+        width: 890px;
+        height: 96px;
+        gap: 48px;
+        font-family: 'Barlow Condensed', sans-serif;
+        letter-spacing: 2.7px;
+        cursor: pointer;
+
+        a {
+            color: white;
+            text-decoration: none;
+            position: relative;
+            @include flex(row);
+            gap: 11px;
+
+            &:hover:before {
+                opacity: 1;
+            }
+            
+            &.active:before {
+                background-color: white;
+                opacity: 1;
+            }
+    
+            &:before {
+                width: 100%;
+                background-color: rgb(151, 151, 151);
+                content: "";
+                height: 3px;
+                position: absolute;
+                bottom: -38px;
+                transition: opacity .3s ease-in-out;
+                opacity: 0;
+            }
+        }
+
+        span {
+            font-weight: 700;
+        }
+    }
+}
+
+// MAIN
+
+main {
+    margin-top: 20px;
+    color: white;
+    @include flex(row);
+    justify-content: space-evenly;
+    margin-right: -330px;
+
+
+    .title {
+        font-family: 'Barlow Condensed', sans-serif;
+        text-transform: uppercase;
+        font-size: 28px;
+        letter-spacing: 4.72px;
+
+        span {
+            color: #4b4b4c;
+            font-weight: 700;
+        }
+    }
+
+    .main {
+        margin-top: 130px;
+        @include flex(row);
+        gap: 80px;
+        
+        .buttons {
+            @include flex(column);
+            gap: 32px;
+        }
+
+        button {
+            font-family: 'Bellefair', sans-serif;
+            border-radius: 50%;
+            width: 80px;
+            height: 80px;
+            font-size: 32px;
+            color: white;
+            background-color: transparent;
+            border: 2px solid rgba(255, 255, 255, 25%);
+            cursor: pointer;
+
+            &:hover {
+                border: 2px solid rgba(255, 255, 255);
+            }
+
+            &.active-button {
+                background-color: white;
+                color: black;
+            }
+        }
+
+        h3 {
+            font-family: 'Barlow Condensed', sans-serif;
+            text-transform: uppercase;
+            font-weight: 400;
+            letter-spacing: 2.7px;
+            margin-bottom: 11px;
+        }
+
+        h2 {
+            text-transform: uppercase;
+            font-size: 56px;
+            font-weight: 400;
+            font-family: 'Bellefair', sans-serif;
+            margin-bottom: 17px;
+        }
+
+        p {
+            font-family: 'Barlow', sans-serif;
+            font-size: 18px;
+            line-height: 32px;
+            width: 500px;
+            font-weight: 400;
+        }
+    }
+
+    img {
+        margin-top: 70px;
+        width: 600px;
+    }
+}
