@@ -32,6 +32,10 @@ header {
     gap: 50px;
     margin-left: 450px;
 
+    .hamburger {
+        display: none;
+    }
+
     .rectangle {
         border-bottom: 1px solid rgb(125, 125, 125);
         width: 500px;
@@ -54,6 +58,12 @@ header {
         font-family: 'Barlow Condensed', sans-serif;
         letter-spacing: 2.7px;
         cursor: pointer;
+
+        ul {
+            @include flex(row);
+            gap: 48px;
+            list-style: none;
+        }
 
         a {
             color: white;
@@ -249,9 +259,7 @@ main {
                     width: 600px;
                 
                     .rectangle {
-                        display: block;
-                        position: relative;
-                        width: 600px;
+                        width: 100%;
                     }
                 }
 
@@ -266,4 +274,106 @@ main {
 
 @media (max-width: 680px) {
 
+    body {
+        background-size: auto;
+    }
+
+    header {
+
+        .logo {
+            margin-top: 20px;
+        }
+
+        .hamburger {
+            display: block;
+        }
+
+        button {
+            border: none;
+            background-color: transparent;
+            margin-right: 20px;
+        }
+
+        nav {
+            font-size: 18px;
+            position: absolute;
+            z-index: -1;            
+            @include flex(column);
+            padding: 0;
+            top: 0;
+            right: 0;
+            width: 375px;
+            margin-right: -5.9rem;
+            padding: 20px;
+            display: none;
+
+            ul {
+                display: flex;
+                flex-direction: column;
+                align-items: start;
+                margin-top: 110px;
+                padding-left: 15px;
+                // margin-right: 180px;
+            }
+
+            a:before {
+                display: none;
+            }
+        }
+    }
+
+    main {
+        margin-top: 10px;
+
+        .title {
+            font-size: 18px;
+            text-align: center;
+            margin: 0;
+        }
+
+        .main {
+
+            .planet img {
+                width: 250px;
+            }
+    
+            .info {
+                width: auto;
+
+                .labels a {
+                    font-size: 16px;
+                }
+
+                .description {
+                    width: auto;
+
+                    .rectangle {
+                        width: 100%;
+                        margin: 50px 0;
+                    }
+
+                    h2 {
+                        font-size: 65px;
+                    }
+
+                    p {
+                        margin-top: 20px;
+                        font-size: 15px;
+                        max-width: 400px;
+                        padding: 0 40px;
+                    }
+                }
+
+                .extra-info {
+                    @include flex(column);
+                    gap: 50px;
+
+                    p {
+                        font-size: 30px;
+                    }
+                }
+            }
+            
+        }
+    }
 }

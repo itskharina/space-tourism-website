@@ -3,6 +3,9 @@ const headerNav = document.querySelector('nav');
 const mainLinks = document.querySelectorAll('.labels a');
 const mainNav = document.querySelector('.labels');
 
+const button = document.querySelector('.hamburger');
+const buttonImage = document.querySelector('.hamburger img');
+
 const title = document.querySelector('.description h2');
 const description = document.querySelector('.description p');
 const planetPhoto = document.querySelector('.planet img');
@@ -27,6 +30,31 @@ mainNav.addEventListener('click', (e) => {
   e.target.classList.add('active');
 
   changeInfo(e);
+});
+
+button.addEventListener('click', () => {
+  if (window.innerWidth <= 680) {
+    if (headerNav.style.display === 'block') {
+      headerNav.style.display = 'none';
+      buttonImage.src = './assets/shared/icon-hamburger.svg';
+    } else {
+      headerNav.style.display = 'block';
+      headerNav.style.height = document.documentElement.scrollHeight + 'px';
+      buttonImage.src = './assets/shared/icon-close.svg';
+    }
+  }
+});
+
+window.addEventListener('resize', () => {
+  if (window.innerWidth > 680) {
+    headerNav.style.display = 'flex';
+    headerNav.style.height = '96px';
+  } else if (window.innerWidth < 680 && headerNav.style.display === 'block') {
+    headerNav.style.display = 'block';
+  } else {
+    headerNav.style.display = 'none';
+    buttonImage.src = './assets/shared/icon-hamburger.svg';
+  }
 });
 
 const fetchData = async () => {

@@ -97,8 +97,6 @@ header {
             }
         }
 
-
-
         span {
             font-weight: 700;
         }
@@ -217,7 +215,6 @@ main {
             }
         }
     }
-
 
     main {
         @include flex(column);
